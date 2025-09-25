@@ -7,7 +7,7 @@ if [ -d out ]; then
 fi
 
 mkdir out
-find src/main -name "*.java" -print0 | xargs -0 javac -parameters -d out
+find src/main -name "*.java" -print0 | xargs -0 javac -cp lib/* -parameters -d out
 
 cd out || exit
 jar cf ../framework.jar .
@@ -15,3 +15,7 @@ cd .. || exit
 rm -rf out
 
 echo "Jar created at framework/framework.jar"
+
+cp framework.jar ../framework_test/lib
+
+echo "Jar copied to lib"

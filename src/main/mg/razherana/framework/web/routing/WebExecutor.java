@@ -164,6 +164,7 @@ public class WebExecutor {
 
         if (varValue == null) {
           if (paramVar.required()) {
+            // The request object is being stored as additional data in the exception.
             throw new BadRequestException("Missing required parameter: " + varName, request);
           }
 

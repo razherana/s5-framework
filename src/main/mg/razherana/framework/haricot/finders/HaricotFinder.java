@@ -149,9 +149,7 @@ public class HaricotFinder {
         // Recursively scan subdirectories
         String subPackage = packageName + "." + file.getName();
         scanDirectory(file, subPackage, classes);
-      }
-
-      if (file.getName().endsWith(".class")) {
+      } else if (file.getName().endsWith(".class")) {
         // Load class file
         String className = packageName + "." + file.getName().replace(".class", "");
         try {

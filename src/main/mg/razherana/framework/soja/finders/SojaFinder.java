@@ -83,9 +83,9 @@ public class SojaFinder {
         i++;
       }
 
-      String methodName = method.getName() + Arrays.stream(method.getParameterTypes())
+      String methodName = method.getName() + "(" + Arrays.stream(method.getParameterTypes())
           .map(e -> e.getSimpleName())
-          .collect(Collectors.joining(","));
+          .collect(Collectors.joining(",")) + ")";
 
       sojaClassContainer.getSojaMethods().put(
           methodName,
@@ -118,9 +118,9 @@ public class SojaFinder {
         i++;
       }
 
-      String constructorName = Arrays.stream(constructor.getParameterTypes())
+      String constructorName = "(" + Arrays.stream(constructor.getParameterTypes())
           .map(e -> e.getSimpleName())
-          .collect(Collectors.joining(","));
+          .collect(Collectors.joining(",")) + ")";
 
       sojaClassContainer.getSojaConstructors().put(constructorName, sojaConstructorContainer);
     }

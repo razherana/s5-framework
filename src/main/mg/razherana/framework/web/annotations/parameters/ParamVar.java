@@ -12,7 +12,7 @@ import mg.razherana.framework.soja.annotations.Soja;
 @Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
 @Target({ java.lang.annotation.ElementType.PARAMETER })
 public @interface ParamVar {
-  public static final String TYPE = "paramvar";
+  public static final String TYPE = "web/paramvar";
 
   /**
    * Name of the parameter variable.

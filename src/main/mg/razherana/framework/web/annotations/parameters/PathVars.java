@@ -13,5 +13,5 @@ import mg.razherana.framework.soja.annotations.Soja;
 @Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
 @Target({ java.lang.annotation.ElementType.PARAMETER })
 public @interface PathVars {
-  public static final String TYPE = "pathvars";
+  public static final String TYPE = "web/pathvars";
 }

@@ -23,7 +23,6 @@ public class WebRouteContainer {
     this.pathParameters = pathParameters;
     this.controllerInstance = controllerInstance;
     this.controllerSojaClassContainer = controllerSojaClassContainer;
-    this.controllerInstance = controllerInstance;
   }
 
   public Method getMethod() {

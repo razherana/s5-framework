@@ -133,7 +133,7 @@ public class FrontServlet extends HttpServlet {
     }
   }
 
-  private void send404(HttpServletResponse response) throws IOException {
+  private void send404(HttpServletResponse response) {
     throw new NotFoundException("Resource not found");
   }
 }
